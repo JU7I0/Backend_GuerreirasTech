@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.guerreirastech.guerreirastech.model.Usuario;
 import com.guerreirastech.guerreirastech.repository.UsuarioRepository;
-import com.guerreirastech.guerreirastech.security.UserDetailsImpl;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
