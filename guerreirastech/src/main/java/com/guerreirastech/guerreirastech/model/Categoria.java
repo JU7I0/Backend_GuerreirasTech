@@ -21,9 +21,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Categoria {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
+
 	@NotBlank
 	private String categoria;
 	
