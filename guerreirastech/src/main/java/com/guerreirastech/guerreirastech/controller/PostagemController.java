@@ -53,7 +53,7 @@ public class PostagemController {
 
 	@PostMapping
 	public ResponseEntity<Postagem> post(@Valid @RequestBody Postagem postagem) {
-		if (postagemRepository.existsById(postagem.getId()))
+		if (categoriaRepository.existsById(postagem.getCategoria().getId()))
 			return ResponseEntity.status(HttpStatus.CREATED)
 					.body(postagemRepository.save(postagem));
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
@@ -63,7 +63,7 @@ public class PostagemController {
 	public ResponseEntity<Postagem> put(@Valid @RequestBody Postagem postagem) {
 		if (postagemRepository.existsById(postagem.getId())) {
 
-			if (categoriaRepository.existsById(postagem.getId()))
+			if (categoriaRepository.existsById(postagem.getCategoria().getId()))
 				return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(postagem));
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
 		}
