@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+
 import com.guerreirastech.guerreirastech.model.Usuario;
 import com.guerreirastech.guerreirastech.model.UsuarioLogin;
 import com.guerreirastech.guerreirastech.repository.UsuarioRepository;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 @RequestMapping("/usuarios")
@@ -70,5 +72,5 @@ public class UsuarioController {
 			.map(resposta -> ResponseEntity.status(HttpStatus.OK).body(resposta))
 			.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
-
+	
 }
