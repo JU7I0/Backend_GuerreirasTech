@@ -1,2 +1,2 @@
 # Backend_GuerreirasTech
-Backend do blog Guerreias Tech - Projeto integrador Generation Brasil.
+Backend do site Guerreias Tech - Projeto integrador Generation Brasil.
